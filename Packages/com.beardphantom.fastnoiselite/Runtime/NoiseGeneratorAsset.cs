@@ -21,17 +21,17 @@ namespace FastNoise
         #region Methods
 
         /// <inheritdoc />
-        public float GetNoise(float x, float y, int seedOffset)
+        public float GetNoise(float x, float y, int seedOverride)
         {
             Config.ApplyTo(_generator);
-            return _generator.GetNoise(x, y, seedOffset);
+            return _generator.GetNoise(x, y, seedOverride);
         }
 
         /// <inheritdoc />
-        public float GetNoise(float x, float y, float z, int seedOffset)
+        public float GetNoise(float x, float y, float z, int seedOverride)
         {
             Config.ApplyTo(_generator);
-            return _generator.GetNoise(x, y, z, seedOffset);
+            return _generator.GetNoise(x, y, z, seedOverride);
         }
 
         /// <inheritdoc />

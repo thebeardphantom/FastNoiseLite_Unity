@@ -1,9 +1,22 @@
 ﻿using System.Runtime.CompilerServices;
+using UnityEngine;
 
 namespace FastNoise
 {
     public static class NoiseGeneratorExtensions
     {
+        #region Fields
+
+        private static readonly Color _black = Color.black;
+
+        private static readonly Color _white = Color.white;
+
+        private static readonly Color32 _black32 = new(0, 0, 0, byte.MaxValue);
+
+        private static readonly Color32 _white32 = new(byte.MaxValue, byte.MaxValue, byte.MaxValue, byte.MaxValue);
+
+        #endregion
+
         #region Methods
 
         /// <summary>
@@ -12,9 +25,9 @@ namespace FastNoise
         /// <returns>
         /// Noise output bounded in range [0, 1]
         /// </returns>
-        public static float GetNoise01(this INoiseGenerator noiseGenerator, float x, float y, int seedOffset)
+        public static float GetNoise01(this INoiseGenerator noiseGenerator, float x, float y, int seedOverride)
         {
-            var noise = noiseGenerator.GetNoise(x, y, seedOffset);
+            var noise = noiseGenerator.GetNoise(x, y, seedOverride);
             noise = RemapTo01(noise);
             return noise;
         }
@@ -25,9 +38,9 @@ namespace FastNoise
         /// <returns>
         /// Noise output bounded in range [0, 1]
         /// </returns>
-        public static float GetNoise01(this INoiseGenerator noiseGenerator, float x, float y, float z, int seedOffset)
+        public static float GetNoise01(this INoiseGenerator noiseGenerator, float x, float y, float z, int seedOverride)
         {
-            var noise = noiseGenerator.GetNoise(x, y, z, seedOffset);
+            var noise = noiseGenerator.GetNoise(x, y, z, seedOverride);
             noise = RemapTo01(noise);
             return noise;
         }
@@ -56,6 +69,30 @@ namespace FastNoise
             var noise = noiseGenerator.GetNoise(x, y, z);
             noise = RemapTo01(noise);
             return noise;
+        }
+
+        public static Color32 SampleColor32(this INoiseGenerator noiseGenerator, float x, float y, int seedOverride)
+        {
+            var noise = noiseGenerator.GetNoise01(x, y, seedOverride);
+            return Color32.Lerp(_black32, _white32, noise);
+        }
+
+        public static Color32 SampleColor32(this INoiseGenerator noiseGenerator, float x, float y)
+        {
+            var noise = noiseGenerator.GetNoise01(x, y);
+            return Color32.Lerp(_black32, _white32, noise);
+        }
+
+        public static Color SampleColor(this INoiseGenerator noiseGenerator, float x, float y, int seedOverride)
+        {
+            var noise = noiseGenerator.GetNoise01(x, y, seedOverride);
+            return Color.Lerp(_black, _white, noise);
+        }
+
+        public static Color SampleColor(this INoiseGenerator noiseGenerator, float x, float y)
+        {
+            var noise = noiseGenerator.GetNoise01(x, y);
+            return Color.Lerp(_black, _white, noise);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

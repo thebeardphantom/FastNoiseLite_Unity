@@ -152,6 +152,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b196a115f4825c4fba902d99be0e802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <NoiseGeneratorConfig>k__BackingField:
+    <Seed>k__BackingField: 1744
+    <Frequency>k__BackingField: 0.01
+    <NoiseType>k__BackingField: 0
+    <FractalType>k__BackingField: 0
+    <RotationType3D>k__BackingField: 0
+    <Octaves>k__BackingField: 1
+    <Lacunarity>k__BackingField: 2
+    <Gain>k__BackingField: 0.5
+    <WeightedStrength>k__BackingField: 0
+    <PingPongStrength>k__BackingField: 2
+    <CellularDistanceFunction>k__BackingField: 1
+    <CellularReturnType>k__BackingField: 1
+    <CellularJitterModifier>k__BackingField: 1
+    <DomainWarpType>k__BackingField: 0
+    <DomainWarpAmp>k__BackingField: 1
+  <NoiseGeneratorAsset>k__BackingField: {fileID: 11400000, guid: e205dea4c1a09874c91068ca680b2653, type: 2}
 --- !u!4 &124209724
 Transform:
   m_ObjectHideFlags: 0
@@ -160,7 +177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124209722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.1415927, y: 3.141593, z: 3.141593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []

@@ -1,5 +1,6 @@
 using FastNoise;
-using System.Runtime.InteropServices;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FastNoiseTest : MonoBehaviour
@@ -18,8 +19,18 @@ public class FastNoiseTest : MonoBehaviour
 
     private void Start()
     {
+        var occurances = new Dictionary<float, int>();
         var position = transform.position;
-        Debug.Log(NoiseGeneratorAsset.GetNoise01(position.x, position.y, position.z));
+        var seedBase = NoiseGeneratorAsset.Config.Seed;
+        for (var i = 0; i < 1000; i++)
+        {
+            var noise01 = NoiseGeneratorAsset.GetNoise(position.x, position.y, position.z, seedBase + i);
+            occurances.TryGetValue(noise01, out var count);
+            count++;
+            occurances[noise01] = count;
+        }
+
+        Debug.Log(string.Join("\n", occurances.OrderByDescending(kvp => kvp.Value)));
     }
 
     #endregion

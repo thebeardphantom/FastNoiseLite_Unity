@@ -29,6 +29,7 @@ namespace FastNoise
         /// Default: 0.01
         /// </remarks>
         [field: SerializeField]
+        [field: SpeedControlledValue(0.001f)]
         public float Frequency { get; private set; } = 0.01f;
 
         /// <summary>
@@ -66,6 +67,7 @@ namespace FastNoise
         /// <remarks>
         /// Default: 3
         /// </remarks>
+        [field: Min(1)]
         [field: SerializeField]
         public int Octaves { get; private set; } = 3;
 
@@ -94,6 +96,7 @@ namespace FastNoise
         /// Default: 0.0
         /// Note: Keep between 0...1 to maintain -1...1 output bounding
         /// </remarks>
+        [field: Range(0f, 1f)]
         [field: SerializeField]
         public float WeightedStrength { get; private set; }
 

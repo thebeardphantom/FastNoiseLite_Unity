@@ -274,11 +274,12 @@ namespace FastNoise
         /// Noise output bounded between [-1, 1]
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public float GetNoise(float x, float y, int seedOffset)
+        public float GetNoise(float x, float y, int seedOverride)
         {
-            Seed += seedOffset;
+            var seedOriginal = Seed;
+            Seed = seedOverride;
             var noise = GetNoise(x, y);
-            Seed -= seedOffset;
+            Seed = seedOriginal;
             return noise;
         }
 
@@ -289,11 +290,12 @@ namespace FastNoise
         /// Noise output bounded between [-1, 1]
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public float GetNoise(float x, float y, float z, int seedOffset)
+        public float GetNoise(float x, float y, float z, int seedOverride)
         {
-            Seed += seedOffset;
+            var seedOriginal = Seed;
+            Seed = seedOverride;
             var noise = GetNoise(x, y, z);
-            Seed -= seedOffset;
+            Seed = seedOriginal;
             return noise;
         }
 
