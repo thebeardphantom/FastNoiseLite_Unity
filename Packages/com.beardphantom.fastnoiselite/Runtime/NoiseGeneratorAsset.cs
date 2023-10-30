@@ -13,6 +13,12 @@ namespace FastNoise
 
         #region Properties
 
+        public int Seed
+        {
+            get => _generator.Seed;
+            set => _generator.Seed = value;
+        }
+
         [field: SerializeField]
         public NoiseGeneratorConfig Config { get; private set; }
 

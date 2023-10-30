@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: New Fast Noise Lite Asset
   m_EditorClassIdentifier: 
   <Config>k__BackingField:
-    <Seed>k__BackingField: 1381
-    <Frequency>k__BackingField: 0.01
-    <NoiseType>k__BackingField: 0
+    <Seed>k__BackingField: 3750
+    <Frequency>k__BackingField: 0.1
+    <NoiseType>k__BackingField: 1
     <FractalType>k__BackingField: 0
     <RotationType3D>k__BackingField: 0
-    <Octaves>k__BackingField: 3
+    <Octaves>k__BackingField: 2
     <Lacunarity>k__BackingField: 2
     <Gain>k__BackingField: 0.5
     <WeightedStrength>k__BackingField: 0

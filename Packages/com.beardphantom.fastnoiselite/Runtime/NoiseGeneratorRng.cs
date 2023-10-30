@@ -12,6 +12,12 @@
 
         public uint Position { get; set; }
 
+        public int Seed
+        {
+            get => _generator.Seed;
+            set => _generator.Seed = value;
+        }
+
         #endregion
 
         #region Constructors

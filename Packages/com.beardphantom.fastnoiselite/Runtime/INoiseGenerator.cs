@@ -2,6 +2,12 @@
 {
     public interface INoiseGenerator
     {
+        #region Properties
+
+        public int Seed { get; set; }
+
+        #endregion
+
         #region Methods
 
         /// <summary>

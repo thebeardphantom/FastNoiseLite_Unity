@@ -1,7 +1,7 @@
 {
   "name": "com.beardphantom.fastnoiselite",
   "displayName": "FastNoiseLite for Unity",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "unity": "2022.3",
   "description": "A port and customization of FastNoiseLite for Unity.",
   "keywords": [
