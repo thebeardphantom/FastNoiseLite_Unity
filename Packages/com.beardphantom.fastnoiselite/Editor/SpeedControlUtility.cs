@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
-namespace FastNoise.Editor
+namespace BeardPhantom.FastNoiseLite.Editor
 {
     public static class SpeedControlUtility
     {

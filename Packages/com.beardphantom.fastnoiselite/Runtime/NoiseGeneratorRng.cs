@@ -1,4 +1,4 @@
-﻿namespace FastNoise
+﻿namespace BeardPhantom.FastNoiseLite
 {
     public class NoiseGeneratorRng
     {

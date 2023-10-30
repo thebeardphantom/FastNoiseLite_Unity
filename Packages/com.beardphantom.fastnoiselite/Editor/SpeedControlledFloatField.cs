@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace FastNoise.Editor
+namespace BeardPhantom.FastNoiseLite.Editor
 {
     public class SpeedControlledFloatField : FloatField, ISpeedControlledField
     {

@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace FastNoise
+namespace BeardPhantom.FastNoiseLite
 {
     public static class NoiseGeneratorExtensions
     {

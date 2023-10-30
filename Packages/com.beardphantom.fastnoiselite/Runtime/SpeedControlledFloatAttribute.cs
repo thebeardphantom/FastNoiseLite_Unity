@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FastNoise
+namespace BeardPhantom.FastNoiseLite
 {
     public class SpeedControlledValueAttribute : PropertyAttribute
     {

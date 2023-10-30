@@ -3,7 +3,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace FastNoise.Editor
+namespace BeardPhantom.FastNoiseLite.Editor
 {
     [CustomEditor(typeof(NoiseGeneratorAsset))]
     public class NoiseGeneratorAssetEditor : UnityEditor.Editor

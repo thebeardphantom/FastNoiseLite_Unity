@@ -49,11 +49,10 @@
 
 using System.Runtime.CompilerServices;
 // Switch between using floats or doubles for input position
-using FNLfloat = System.Single;
 
 //using FNLfloat = System.Double;
 
-namespace FastNoise
+namespace BeardPhantom.FastNoiseLite
 {
     public partial class NoiseGenerator : INoiseGenerator
     {

@@ -1,0 +1,16 @@
+{
+    "name": "BeardPhantom.FastNoiseLite.Editor",
+    "rootNamespace": "BeardPhantom.FastNoiseLite.Editor",
+    "references": [
+        "GUID:8e6360ee2fed0024489b23d9089c8fcb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

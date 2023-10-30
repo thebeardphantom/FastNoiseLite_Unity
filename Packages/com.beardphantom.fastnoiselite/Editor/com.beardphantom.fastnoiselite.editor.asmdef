@@ -1,5 +1,0 @@
-﻿{
-  "name": "com.beardphantom.fastnoiselite.editor",
-  "rootNamespace": "FastNoise.Editor",
-  "references":[ "GUID:8e6360ee2fed0024489b23d9089c8fcb" ]
-}

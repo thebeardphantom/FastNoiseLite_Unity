@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FastNoise
+namespace BeardPhantom.FastNoiseLite
 {
     [CreateAssetMenu(menuName = "CUSTOM/" + nameof(NoiseGeneratorAsset))]
     public class NoiseGeneratorAsset : ScriptableObject, INoiseGenerator

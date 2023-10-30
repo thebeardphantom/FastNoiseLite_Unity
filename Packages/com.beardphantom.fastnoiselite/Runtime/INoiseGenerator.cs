@@ -1,10 +1,10 @@
-﻿namespace FastNoise
+﻿namespace BeardPhantom.FastNoiseLite
 {
     public interface INoiseGenerator
     {
         #region Properties
 
-        public int Seed { get; set; }
+        int Seed { get; set; }
 
         #endregion
 

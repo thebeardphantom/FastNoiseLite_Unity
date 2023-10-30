@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
-namespace FastNoise.Editor
+namespace BeardPhantom.FastNoiseLite.Editor
 {
     [CustomPropertyDrawer(typeof(SpeedControlledValueAttribute))]
     public class SpeedControlledValuePropertyDrawer : PropertyDrawer

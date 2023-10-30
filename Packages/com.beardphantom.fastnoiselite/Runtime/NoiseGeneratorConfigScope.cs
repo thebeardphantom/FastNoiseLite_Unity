@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FastNoise
+namespace BeardPhantom.FastNoiseLite
 {
     public readonly struct NoiseGeneratorConfigScope : IDisposable
     {

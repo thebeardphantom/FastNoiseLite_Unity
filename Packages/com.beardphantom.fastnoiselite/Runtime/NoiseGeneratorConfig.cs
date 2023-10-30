@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace FastNoise
+namespace BeardPhantom.FastNoiseLite
 {
     [Serializable]
     public class NoiseGeneratorConfig

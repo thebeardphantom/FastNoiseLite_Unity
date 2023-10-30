@@ -1,6 +1,6 @@
 ﻿using UnityEngine.UIElements;
 
-namespace FastNoise.Editor
+namespace BeardPhantom.FastNoiseLite.Editor
 {
     public interface ISpeedControlledField : IBindable
     {
